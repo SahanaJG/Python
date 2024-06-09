@@ -1,0 +1,16 @@
+# Input: Size of the array, activities, and the absolute difference k
+n = int(input())
+activities = list(map(int, input().split()))
+k = int(input())
+
+# Initialize count of unique pairs
+pairs_count = 0
+
+# Iterate through the array and check for pairs
+for i in range(n):
+    for j in range(i + 1, n):  # Ensure i < j
+        if abs(activities[i] - activities[j]) == k:
+            pairs_count += 1
+
+# Print the count of unique pairs with the absolute difference k
+print(pairs_count)
