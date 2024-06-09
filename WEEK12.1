@@ -1,0 +1,13 @@
+def calculate_earnings(X, shoe_sizes, requests):
+    earnings = 0
+    for size, price in requests:
+        if size in shoe_sizes:
+            shoe_sizes.remove(size)
+            earnings += price
+    return earnings
+X = int(input())
+shoe_sizes = list(map(int, input().split()))
+N = int(input())
+requests = [tuple(map(int, input().split())) for _ in range(N)]
+total_earnings = calculate_earnings(X, shoe_sizes, requests)
+print(total_earnings)
