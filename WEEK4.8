@@ -1,0 +1,8 @@
+n=int(input())
+n_str=str(n)
+n_r_d=[]
+for digit in n_str:
+    if n_str.count(digit)==1:
+        n_r_d.append(int(digit))
+    n_r_count=len(n_r_d)
+print(n_r_count)
