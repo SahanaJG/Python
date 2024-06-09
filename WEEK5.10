@@ -1,0 +1,5 @@
+s=input()
+if(s in "break,case,continue,default, defer, else, for, func, goto, if, map, range, return, struct, type, var"):
+    print(s,"is a keyword")
+else:
+    print(s,"is not a keyword")
