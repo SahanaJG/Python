@@ -1,0 +1,9 @@
+def checkUgly(n):
+    if n <= 0:
+        return "not ugly"
+    
+    for factor in [2, 3, 5]:
+        while n % factor == 0:
+            n //= factor
+            
+    return "ugly" if n == 1 else "not ugly"
