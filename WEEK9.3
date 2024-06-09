@@ -1,0 +1,15 @@
+def coinChange(n):
+    # List of coin denominations sorted in descending order
+    coins = [4, 3, 2, 1]
+    count = 0
+    remaining = n
+    
+    # Loop through each coin denomination
+    for coin in coins:
+        if remaining == 0:
+            break
+        # Use as many coins of this denomination as possible
+        count += remaining // coin
+        remaining %= coin
+    
+    return count
