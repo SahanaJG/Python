@@ -1,0 +1,23 @@
+def safe_division():
+    try:
+        numerator = input()
+        denominator = input()
+
+        num = float(numerator)
+        denom = float(denominator)
+
+        if denom == 0:
+            return "Error: Cannot divide or modulo by zero."
+        
+        result = num / denom
+        return f"{result}"
+
+    except ValueError:
+        return "Error: Non-numeric input provided."
+
+def main():
+    result = safe_division()
+    print(result)
+
+if __name__ == "__main__":
+    main()
