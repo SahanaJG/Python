@@ -1,0 +1,33 @@
+def get_age_message(age):
+    if age.strip() == "":
+        return "Error: Please enter a valid age."
+    try:
+        age_int = int(age)
+        if age_int < 0:
+            return "Error: Please enter a valid age."
+        elif age_int < 13:
+            return f"You are {age} years old."
+        elif age_int < 20:
+            return f"You are {age} years old."
+        elif age_int < 65:
+            return f"You are {age} years old."
+        else:
+            return f"You are {age} years old."
+    except ValueError:
+        return "Error: Please enter a valid age."
+    except EOFError:
+        return "Error: Please enter a valid age."
+
+def main():
+    try:
+        age = input()
+        message = get_age_message(age)
+    except ValueError:
+        message = "Error: Please enter a valid age."
+    except EOFError:
+        message = "Error: Please enter a valid age."
+
+    print(message)
+
+if __name__ == "__main__":
+    main()
