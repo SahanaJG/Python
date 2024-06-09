@@ -1,0 +1,19 @@
+s= input()
+
+if len(s) <= 10:
+    result = []
+else:
+    l1 = []
+    l2 = []
+
+    for i in range(len(s) - 9):
+        c= s[i:i+10]
+        if c in l1 and c not in l2:
+            l2.append(c)
+        else:
+            l1.append(c)
+
+    result = l2
+
+for i in result:
+    print(i)
