@@ -1,0 +1,12 @@
+s=input()
+b=input()
+b=b.lower()
+l=s.split()
+c=0
+for i in b:
+    for j in l:
+        j=j.lower()
+        if i in j:
+            c+=1
+print(len(l)-c)
+            
