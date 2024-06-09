@@ -1,0 +1,17 @@
+def reverse_string(s):
+    result = ''
+    for char in s:
+        if char.isalpha():
+            result += char
+    result = result[::-1]
+    ptr = 0
+    for i in range(len(s)):
+        if s[i].isalpha():
+            # Replace the alphabet character with the corresponding character from the reversed result string
+            s = s[:i] + result[ptr] + s[i+1:]
+            # Move the pointer to the next character in the result string
+            ptr += 1
+    return s
+input_str = input()
+output_str = reverse_string(input_str)
+print(output_str)
