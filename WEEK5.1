@@ -1,0 +1,8 @@
+S = input()
+L = int(input())
+
+# Split the input string into words and count the words with length at least L
+count = sum(1 for word in S.split() if len(word) >= L)
+
+# Print the count
+print(count)
